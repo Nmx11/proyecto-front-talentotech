@@ -1,0 +1,220 @@
+/* Reseteo básico y tipografía */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fcfcfc;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff4a57;
+}
+
+/* Sección Hero con Degradado (Background solicitado) */
+.hero {
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.8)), linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Secciones Generales */
+.planes-section, .resenas-section, .contacto-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.planes-section h2, .resenas-section h2, .contacto-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Flexbox para la sección de Productos (Cards) */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card .precio {
+    font-size: 1.5rem;
+    color: #ff4a57;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card button {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Grid para la sección de Reseñas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.review {
+    background: #f4f4f4;
+    padding: 25px;
+    border-left: 5px solid #ff4a57;
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+}
+
+.review .calificacion {
+    margin-bottom: 10px;
+}
+
+.review h4 {
+    margin-top: 15px;
+    color: #666;
+}
+
+/* Estilos del Formulario de Contacto */
+.contacto-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contacto-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contacto-form input, .contacto-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contacto-form button {
+    background-color: #ff4a57;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries para Diseño Responsivo (Contacto y Grid) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* El grid de reseñas pasa a 1 columna en móviles */
+    }
+
+    .contacto-form {
+        width: 100%;
+        padding: 20px;
+    }
+}
